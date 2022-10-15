@@ -1,5 +1,5 @@
-# Domains:
-# ethanuppal.github.io
+Domains:
+ethanuppal.github.io,ethanuppal.github.io
 
 Document-Name: Privacy Policy
 Url: https://ethanuppal.github.io/transcribe/help.html
