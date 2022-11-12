@@ -1,2 +1,3 @@
 https://ethanuppal.github.io/transcribe/index.html
 https://ethanuppal.github.io/transcribe/help.html
+https://ethanuppal.github.io/reveal/index.html
