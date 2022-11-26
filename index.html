@@ -8,7 +8,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="lI5UUtJkFJtmq4f8hRKzY0Vf1sOwJoTgbdgcY59GUrc" />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ethanuppal.github.io/cdn/lib/syntax.js"></script>
+        <noscript>
+            <link rel="stylesheet" href="https://ethanuppal.github.io/cdn/lib/syntax.css">
+        </noscript>
     </head>
     <body>
         <div class="container">
@@ -21,6 +25,27 @@
                 <li><a href="https://editor.p5js.org/operemur/full/-0sths3C6">Latin Wordle</a>, Wordle but in Latin</li>
                 <li><a href="https://ethanuppal.github.io/reveal/">Reveal</a>, which reveals what you unknowingly expose to websites.</li>
             </ul>
+            <div>
+                <p>This is a <a href="https://en.wikipedia.org/wiki/Text-based_user_interface">UNIX TUI library</a> that I wrote, golfed in 869 bytes:</p>
+                <pre class="code code-c"><noscript>This code block uses JavaScript for pretty syntax highlighting :(<br /></noscript>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;termios.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;poll.h&gt;
+#define I STDIN_FILENO
+#define O STDOUT_FILENO
+#define P printf
+#define U struct termios
+#define E "\033"
+#define Y(x)TC##x##FLUSH
+struct tui{int w;int h;char k;int f;U t;U u;char*b;struct pollfd p;};
+#define tui_begin(T,W,H)T.w=W;T.h=H;P(E"[?25l");T.f=fcntl(I,F_GETFL);tcgetattr(O,&T.t);fcntl(I,F_SETFL,T.f|O_NONBLOCK);T.u=T.t;T.u.c_lflag&=~(ECHO|ICANON);tcsetattr(O,Y(SA),&T.u);T.p.fd=I;T.p.events=POLLIN;T.p.revents=0;T.b=malloc(W*H);memset(T.b,' ',W*H);
+#define tui_end(T) P(E"[?25h");fcntl(I,F_SETFL,T.f);tcsetattr(O,Y(SA),&T.t);free(T.b)
+#define tui_keys(T) T.k=0;if(poll(&T.p,1,5)&gt;0)read(I,&T.k,1)
+#define tui_draw(T) P(E"[H");for(int i=0;i&lt;T.h;i++){for(int j=0;j&lt;T.w;j++)putchar(T.b[i*T.w+j]);putchar('\n');}tcflush(O,Y(IO))</pre>
+            </div>
             <p>You can read my statement on privacy <a href="privacy.html">here</a>.</p>
         </div>
     </body>
