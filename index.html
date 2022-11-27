@@ -9,10 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="lI5UUtJkFJtmq4f8hRKzY0Vf1sOwJoTgbdgcY59GUrc" />
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://ethanuppal.github.io/cdn/lib/syntax.css">
         <script src="https://ethanuppal.github.io/cdn/lib/syntax.js"></script>
-        <noscript>
-            <link rel="stylesheet" href="https://ethanuppal.github.io/cdn/lib/syntax.css">
-        </noscript>
     </head>
     <body>
         <div class="container">
@@ -47,6 +45,11 @@ struct tui{int w;int h;char k;int f;U t;U u;char*b;struct pollfd p;};
 #define tui_draw(T) P(E"[H");for(int i=0;i&lt;T.h;i++){for(int j=0;j&lt;T.w;j++)putchar(T.b[i*T.w+j]);putchar('\n');}tcflush(O,Y(IO))</pre>
             </div>
             <p>You can read my statement on privacy <a href="privacy.html">here</a>.</p>
+            <script>
+                for (const codeBlocks of document.getElementsByClassName('code')) {
+                    SyntaxHighlighter.highlight(codeBlocks);
+                }
+            </script>
         </div>
     </body>
 </html>
