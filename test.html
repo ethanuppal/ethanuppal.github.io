@@ -1,0 +1,25 @@
+<!-- ethanuppal.github.io: test.html -->
+<!-- Copyright (C) 2022 Ethan Uppal. All rights reserved. -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Welcome to the testing page!</p>
+        <iframe src="https://ethanuppal.github.io/api/highlight.html" onload="syntaxHighlight(this);" style="width: 100%;"></iframe>
+        <script>
+        function syntaxHighlight(frame) {
+            frame.contentWindow.postMessage({
+                content: '#define TESTING testing\nchar* string = "This tests the embedded syntax highlighting feature. \\"There is even an escaped string\\" in here!";\nvoid this(int is) {\n    printf("This is a line of code\\n");\n    printf("This is another line of code\\n");\n    printf("This is a line of code\\n");\n    printf("This is yet another line of code\\n");\n    printf("This is a line of code\\n");\n    printf("This is still another line of code\\n");\n    printf("This is--they just keep coming!\\n");\n    printf("Will this stop?\\n");\n    printf("I hope...\\n");\n}',
+                language: 'c',
+                wrap: true,
+                font: 'Menlo'
+                fontSize: '16px',
+            }, '*');
+        }
+        </script>
+    </body>
+</html>
