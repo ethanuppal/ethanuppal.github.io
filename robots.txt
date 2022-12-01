@@ -1,0 +1,10 @@
+User-agent: *
+Allow:    /transcribe/index.html
+Allow:    /transcribe/help.html
+Allow:    /transcribe/library.html
+Allow:    /reveal/index.html
+Allow:    /reveal/about.html
+Disallow: /transcribe/assets
+Disallow: /transcribe/lib
+Disallow: /transcribe/script
+Disallow: /transcribe/app.js
