@@ -4,7 +4,11 @@ Allow:    /transcribe/help.html
 Allow:    /transcribe/library.html
 Allow:    /reveal/index.html
 Allow:    /reveal/about.html
+Allow:    /reveal/privacy.html
 Disallow: /transcribe/assets
 Disallow: /transcribe/lib
 Disallow: /transcribe/script
 Disallow: /transcribe/app.js
+Disallow: /cdn
+Disallow: /api
+Sitemap: /sitemap.txt
