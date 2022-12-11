@@ -16,12 +16,15 @@
     <body>
         <div class="container">
             <h1>Hello</h1>
+            <blockquote class="dark" style="font-size: 14px;">
+                I haven't fully worked out all the kinks of dark mode — sorry if it looks a little strange.
+            </blockquote>
             <p>I hope you're having a good day. Here are links to a few of my projects:</p>
             <ul>
                 <li><a href="https://ethanuppal.github.io/transcribe">Transcribe</a>, a simple web app to aid in transcribing music</li>
                 <li><a href="https://github.com/ethanuppal/machdump">MachDump</a>, a tool for low-level debugging of Mach-O files</li>
                 <li><a href="https://github.com/ethanuppal/posts/blob/main/posts/macho2.md">Overview of Mach-O Files</a>, documentation for the Mach-O Object File Format</li>
-                <li><a href="https://editor.p5js.org/operemur/full/-0sths3C6">Latin Wordle</a>, the NYT game <a href="https://www.nytimes.com/games/wordle/index.html">Wordle<a> in Latin</li>
+                <li><a href="https://editor.p5js.org/operemur/full/-0sths3C6">Latin Wordle</a>, the NYT game <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> in Latin</li>
                 <li><a href="https://ethanuppal.github.io/reveal/">Reveal</a>, a website revealing what you unwillingly expose online</li>
                 <li><a href="https://gist.github.com/ethanuppal/c8e987fda6ca963cf9bf21b3991a321e" rel="nofollow">AP Assignments Plugin</a>, a plugin to improve the AP Assignments experience</li>
             </ul>
@@ -47,6 +50,7 @@ struct tui{int w;int h;char k;int f;U t;U u;char*b;struct pollfd p;};
 #define tui_draw(T) P(E"[H");for(int i=0;i&lt;T.h;i++){for(int j=0;j&lt;T.w;j++)putchar(T.b[i*T.w+j]);putchar('\n');}tcflush(O,Y(IO))</pre>
             </div>
             <p>You can read my statement on privacy <a href="privacy.html">here</a>.</p>
+            <p class="copyright">Copyright © 2022- Ethan Uppal :)</p>
         </div>
     </body>
 </html>

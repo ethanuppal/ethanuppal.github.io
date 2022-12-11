@@ -2,6 +2,7 @@
 
 :root {
     --background-color: #D2D2CF;
+    --background-color-dark: #2D2D30;
 }
 
 body {
@@ -32,4 +33,33 @@ body {
         margin-right: 20px;
         max-width: 600px;
     }
+}
+
+/* Dark mode */
+.dark {
+    visibility: hidden;
+    display: none;
+}
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
+    .container {
+        background-color: var(--background-color-dark);
+        color: white;
+    }
+    a {
+        color: orange;
+    }
+    a:visited {
+        filter: brightness(90%);
+    }
+    .dark {
+        visibility: visible;
+        display: block;
+    }
+} */
+
+.copyright {
+    font-size: 12px;
 }

@@ -11,4 +11,4 @@ Disallow: /transcribe/script
 Disallow: /transcribe/app.js
 Disallow: /cdn
 Disallow: /api
-Sitemap: /sitemap.txt
+Sitemap:  /sitemap.txt
