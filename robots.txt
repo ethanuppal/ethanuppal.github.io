@@ -11,4 +11,6 @@ Disallow: /transcribe/script
 Disallow: /transcribe/app.js
 Disallow: /cdn
 Disallow: /api
+Disallow: /test.html
+Disallow: /index.html
 Sitemap:  /sitemap.txt
